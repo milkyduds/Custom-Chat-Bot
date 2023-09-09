@@ -11,23 +11,30 @@ user_allergens = []
 def input_allergens():
     print("Enter your allergens")
     while True:
-        allergy = input().strip().lower()
-        if allergy == "x":
+        allergen = input().strip().lower()
+        if allergen == "x":
             break
-        user_allergens.append(allergy)
+        user_allergens.append(allergen)
 
 def check_safety():
-    food = input("Enter food to check").strip().lower()
-    for allergy in user_allergens:
-        if allergy in allergy_database and food in allergen_database[allergy]:
-            return f"{food} is NOT safe to eat because it contains {allergen}"
-        return f"{food} is safe to eat"
+    print("Enter food to check")
+    while True:
+        food = input().strip().lower()
+        safe = True
+        if food == "x":
+            break
+        for allergen in user_allergens:
+            if allergen in allergen_database and food in allergen_database[allergen]:
+                print(f"{food} is NOT safe to eat because it contains {allergen}")
+                safe = False
+                break
+        if safe:
+            print(f"{food} is safe to eat")
 
 def main():
     input_allergens()
-    result = check_safety()
-    print(result)
+    check_safety()
 
-f __name__ == "__main__":
+if __name__ == "__main__":
     main()
 
