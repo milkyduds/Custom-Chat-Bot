@@ -1,9 +1,13 @@
 allergen_database = {
-    'peanuts': ['peanut butter', 'peanut cookies', 'peanut soup'],
-    'milk': ['cheese', 'milk chocolate', 'yogurt'],
+    'peanuts': ['peanut butter', 'peanut cookies', 'peanut soup', 'trail mix', 'peanut brittle'],
+    'milk': ['cheese', 'milk chocolate', 'yogurt', 'butter', 'cream'],
     'eggs': ['scrambled eggs', 'omelette', 'mayonnaise'],
     'soy': ['tofu', 'soy sauce', 'soy milk'],
     'wheat': ['bread', 'pasta', 'pizza'],
+    'fish': ['bass', 'flounder', 'cod'],
+    'shellfish': ['crab','lobster','shrimp'],
+    'treenuts': ['almonds','walnuts','pecans'],
+    'sesame': ['tahini', 'sushi', 'bread', 'cereal', 'granola', 'sesame oil', 'sesame paste'],
 }
 
 #Function input allergy
